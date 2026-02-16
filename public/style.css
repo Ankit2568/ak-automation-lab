@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f172a;
+  color: white;
+}
+
+header {
+  background: #1e293b;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: #38bdf8;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #facc15;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.card {
+  background: #1e293b;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.section-title {
+  color: #38bdf8;
+}
