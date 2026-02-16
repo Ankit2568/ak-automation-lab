@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>QA Automation Lab</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="background"></div>
+
+<header>
+  <h1>🚀 QA Automation Practice Lab</h1>
+  <p>Find the bugs. Break the system. Think like a real QA.</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h3>📌 Broken Image</h3>
+    <img src="broken-image.jpg" width="150">
+  </div>
+
+  <div class="card">
+    <h3>📌 Duplicate ID</h3>
+    <input type="text" id="duplicate" placeholder="First Input">
+    <input type="text" id="duplicate" placeholder="Second Input">
+  </div>
+
+  <div class="card">
+    <h3>📌 Hidden Element</h3>
+    <button onclick="showHidden()">Reveal</button>
+    <p id="hiddenText" class="hidden">Secret Text</p>
+  </div>
+
+  <div class="card">
+    <h3>📌 Wrong Success Message</h3>
+    <button onclick="showSuccess()">Submit</button>
+    <p id="successMessage"></p>
+  </div>
+
+  <div class="card">
+    <h3>📌 Email Validation Bug</h3>
+    <input type="text" id="email" placeholder="Enter Email">
+    <button onclick="validateForm()">Validate</button>
+    <p id="emailMessage"></p>
+  </div>
+
+  <div class="card">
+    <h3>📌 NaN Calculation</h3>
+    <input type="text" id="num1" placeholder="Number 1">
+    <input type="text" id="num2" placeholder="Number 2">
+    <button onclick="calculate()">Add</button>
+    <p id="result"></p>
+  </div>
+
+  <div class="card">
+    <h3>📌 Sorting Bug</h3>
+    <ul id="numbers">
+      <li>10</li>
+      <li>2</li>
+      <li>30</li>
+    </ul>
+    <button onclick="sortNumbers()">Sort</button>
+  </div>
+
+  <div class="card">
+    <h3>📌 Fake API Response</h3>
+    <button onclick="loadData()">Load Data</button>
+    <p id="apiResult"></p>
+  </div>
+
+  <div class="card">
+    <h3>📌 Console Error</h3>
+    <button onclick="causeError()">Trigger Error</button>
+  </div>
+
+</div>
+
+<script>
+function showHidden() {
+  document.getElementById("hiddenText").classList.remove("hidden");
+}
+
+function showSuccess() {
+  document.getElementById("successMessage").innerText =
+    "Error: Form Submitted Successfully!";
+}
+
+function validateForm() {
+  let email = document.getElementById("email").value;
+  if (email == "") {
+    document.getElementById("emailMessage").innerText = "Valid Email";
+  } else {
+    document.getElementById("emailMessage").innerText = "Invalid Email";
+  }
+}
+
+function calculate() {
+  let a = document.getElementById("num1").value;
+  let b = document.getElementById("num2").value;
+  let result = a + b;
+  document.getElementById("result").innerText = "Result: " + result;
+}
+
+function sortNumbers() {
+  let list = document.getElementById("numbers");
+  let items = Array.from(list.children);
+  items.sort((a, b) => a.innerText > b.innerText ? 1 : -1);
+  items.forEach(item => list.appendChild(item));
+}
+
+function loadData() {
+  document.getElementById("apiResult").innerText =
+    "Status: 500 Internal Server Error";
+}
+
+function causeError() {
+  nonExistingFunction();
+}
+</script>
+
+</body>
+</html>

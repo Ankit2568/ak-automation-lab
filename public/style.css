@@ -1,41 +1,163 @@
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #0f172a;
+*.hero {
+  height: 90vh;
+  background: linear-gradient(135deg, #111827, #1f2937);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   color: white;
 }
 
-header {
-  background: #1e293b;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-top: 20px;
 }
 
-nav a {
-  color: #38bdf8;
+.hero-content p {
+  margin: 15px 0;
+  opacity: 0.8;
+}
+
+.profile-img {
+  width: 120px;
+  border-radius: 50%;
+  border: 3px solid #2563eb;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #2563eb;
+  color: white;
+  border-radius: 8px;
   text-decoration: none;
-  margin: 0 15px;
-  font-weight: 500;
+  margin-top: 15px;
+  transition: 0.2s;
 }
 
-nav a:hover {
-  color: #facc15;
+.hero-btn:hover {
+  background: #1d4ed8;
 }
 
-.hero {
-  text-align: center;
+.sections {
   padding: 60px 20px;
+  background: #f9fafb;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.section-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  width: 300px;
+  border: 1px solid #e5e7eb;
+  transition: 0.2s;
+}
+
+.section-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #111827;
+  color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background-color: #f4f6f9;
+  color: #1a1a1a;
+}
+
+header {
+  background: #111827;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+header p {
+  margin-top: 10px;
+  opacity: 0.7;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+  padding: 0 20px;
 }
 
 .card {
-  background: #1e293b;
-  padding: 20px;
-  margin: 20px;
-  border-radius: 10px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  transition: 0.2s ease;
 }
 
-.section-title {
-  color: #38bdf8;
+.card:hover {
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transform: translateY(-3px);
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: #111827;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+button {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+ul {
+  margin-bottom: 10px;
+}
+
+.hidden {
+  display: none;
 }
